@@ -1,0 +1,442 @@
+#!/usr/bin/env python3
+
+# MIT License
+#
+# Copyright (c) 2021 Ferhat Geçdoğan All Rights Reserved.
+# Distributed under the terms of the MIT License.
+#
+
+# PyFFont
+#   Python3 implementation of FFont (library, executable)
+#
+#   github.com/ferhatgec/ffont
+#
+
+# TODO:
+# More fonts.
+
+import sys
+
+# You can use PyFFont as library too.
+class FFont():
+    def __init__(self, text):
+        self.a: str = (
+            " █████  \n"
+			 "██   ██ \n"
+			 "███████ \n"
+			 "██   ██ \n"
+			 "██   ██ "
+        )
+
+        self.b: str = (
+            "██████  \n"
+            "██   ██ \n"
+            "██████  \n"
+            "██   ██ \n"
+            "██████  "
+        )
+
+        self.c: str = (
+            " ██████ \n"
+            "██      \n"
+            "██      \n"
+            "██      \n"
+            " ██████ "
+        )
+
+        self.d: str = (
+            "██████  \n"
+            "██   ██ \n"
+            "██   ██ \n"
+            "██   ██ \n"
+            "██████  "
+        )
+
+        self.e: str = (
+            "███████ \n"
+            "██      \n"
+            "█████   \n"
+            "██      \n"
+            "███████ "
+        )
+
+        self.f: str = (
+            "███████ \n"
+            "██      \n"
+            "█████   \n"
+            "██      \n"
+            "██      "
+        )
+
+        self.g: str = (
+            " ██████  \n"
+            "██       \n"
+            "██   ███ \n"
+            "██    ██ \n"
+            " ██████  "
+        )
+
+        self.h: str = (
+            "██   ██ \n"
+            "██   ██ \n"
+            "███████ \n"
+            "██   ██ \n"
+            "██   ██ "
+        )
+
+        self.i: str = (
+            "██ \n"
+            "██ \n"
+            "██ \n"
+            "██ \n"
+            "██ "
+        )
+
+        self.j: str = (
+            "     ██ \n"
+            "     ██ \n"
+            "     ██ \n"
+            "██   ██ \n"
+            " █████  "
+        )
+
+        self.k: str = (
+            "██   ██ \n"
+            "██  ██  \n"
+            "█████   \n"
+            "██  ██  \n"
+            "██   ██ "
+        )
+
+        self.l: str = (
+            "██      \n"
+            "██      \n"
+            "██      \n"
+            "██      \n"
+            "███████ "
+        )
+
+        self.m: str = (
+            "███    ███ \n"
+            "████  ████ \n"
+            "██ ████ ██ \n"
+            "██  ██  ██ \n"
+            "██      ██ "
+        )
+
+        self.n: str = (
+            "███    ██ \n"
+            "████   ██ \n"
+            "██ ██  ██ \n"
+            "██  ██ ██ \n"
+            "██   ████ "
+        )
+
+        self.o: str = (
+            " ██████  \n"
+            "██    ██ \n"
+            "██    ██ \n"
+            "██    ██ \n"
+            " ██████  "
+        )
+
+        self.p: str = (
+            "██████  \n"
+            "██   ██ \n"
+            "██████  \n"
+            "██      \n"
+            "██      "
+        )
+
+        self.q: str = (
+            " ██████  \n"
+            "██    ██ \n"
+            "██    ██ \n"
+            "██ ▄▄ ██ \n"
+            " ██████  \n"
+            "    ▀▀   "
+        )
+
+        self.r: str = (
+            "██████  \n"
+            "██   ██ \n"
+            "██████  \n"
+            "██   ██ \n"
+            "██   ██ "
+        )
+
+        self.s: str = (
+            "███████ \n"
+            "██      \n"
+            "███████ \n"
+            "     ██ \n"
+            "███████ "
+        )
+
+        self.t: str = (
+            "████████ \n"
+            "   ██    \n"
+            "   ██    \n"
+            "   ██    \n"
+            "   ██    "
+        )
+
+        self.u: str = (
+            "██    ██ \n"
+            "██    ██ \n"
+            "██    ██ \n"
+            "██    ██ \n"
+            " ██████  "
+        )
+
+        self.v: str = (
+            "██    ██ \n"
+            "██    ██ \n"
+            "██    ██ \n"
+            " ██  ██  \n"
+            "  ████   "
+        )
+
+        self.w: str = (
+            "██     ██ \n"
+            "██     ██ \n"
+            "██  █  ██ \n"
+            "██ ███ ██ \n"
+            " ███ ███  "
+        )
+
+        self.x: str = (
+            "██   ██ \n"
+            " ██ ██  \n"
+            "  ███   \n"
+            " ██ ██  \n"
+            "██   ██ "
+        )
+
+        self.y: str = (
+            "██    ██ \n"
+            " ██  ██  \n"
+            "  ████   \n"
+            "   ██    \n"
+            "   ██    "
+        )
+
+        self.z: str = (
+            "███████ \n"
+            "   ███  \n"
+            "  ███   \n"
+            " ███    \n"
+            "███████ "
+        )
+
+        self.dot: str = (
+            "   \n"
+            "   \n"
+            "   \n"
+            "   \n"
+            "██ "
+        )
+
+        self.comma: str = (
+            "   \n"
+            "   \n"
+            "   \n"
+            "   \n"
+            "▄█ "
+        )
+
+        self.exclam: str = (
+            "██ \n"
+            "██ \n"
+            "██ \n"
+            "   \n"
+            "██ "
+        )
+
+        self.one: str = (
+            " ██ \n"
+            "███ \n"
+            " ██ \n"
+            " ██ \n"
+            " ██ "
+        )
+
+        self.two: str = (
+            "██████  \n"
+            "     ██ \n"
+            " █████  \n"
+            "██      \n"
+            "███████ "
+        )
+
+        self.three: str = (
+            "██████  \n"
+            "     ██ \n"
+            " █████  \n"
+            "     ██ \n"
+            "██████  "
+        )
+
+        self.four: str = (
+            "██   ██ \n"
+            "██   ██ \n"
+            "███████ \n"
+            "     ██ \n"
+            "     ██ "
+        )
+
+        self.five: str = (
+            "███████ \n"
+            "██      \n"
+            "███████ \n"
+            "     ██ \n"
+            "███████ "
+        )
+
+        self.six: str = (
+            " ██████  \n"
+            "██       \n"
+            "███████  \n"
+            "██    ██ \n"
+            " ██████  "
+        )
+
+        self.seven: str = (
+            "███████ \n"
+            "     ██ \n"
+            "    ██  \n"
+            "   ██   \n"
+            "   ██   "
+        )
+
+        self.eight: str = (
+            " █████  \n"
+            "██   ██ \n"
+            " █████  \n"
+            "██   ██ \n"
+            " █████  "
+        )
+
+        self.nine: str = (
+            " █████  \n"
+            "██   ██ \n"
+            " ██████ \n"
+            "     ██ \n"
+            " █████  "
+        )
+
+        self.zero: str = (
+            " ██████  \n"
+            "██  ████ \n"
+            "██ ██ ██ \n"
+            "████  ██ \n"
+            " ██████  "
+        )
+
+        self.space: str= (
+            "   \n"
+            "   \n"
+            "   \n"
+            "   \n"
+            "   "
+        )
+
+        self.generated: str = ''
+        self.index: int     = 0
+        self.text: str      = text
+
+    def get_specific_line(self, data: str):
+        for _index, line_data in enumerate(data.splitlines()):
+            if _index == self.index:
+                self.generated += line_data + ' '
+
+    def generate(self):
+        characters = {
+            # Characters
+            'a': self.get_specific_line,
+            'b': self.get_specific_line,
+            'c': self.get_specific_line,
+            'd': self.get_specific_line,
+            'e': self.get_specific_line,
+            'f': self.get_specific_line,
+            'g': self.get_specific_line,
+            'h': self.get_specific_line,
+            'i': self.get_specific_line,
+            'j': self.get_specific_line,
+            'k': self.get_specific_line,
+            'l': self.get_specific_line,
+            'm': self.get_specific_line,
+            'n': self.get_specific_line,
+            'o': self.get_specific_line,
+            'p': self.get_specific_line,
+            'r': self.get_specific_line,
+            's': self.get_specific_line,
+            't': self.get_specific_line,
+            'u': self.get_specific_line,
+            'v': self.get_specific_line,
+            'w': self.get_specific_line,
+            'x': self.get_specific_line,
+            'y': self.get_specific_line,
+            'z': self.get_specific_line,
+
+        # Signs
+            '.': self.get_specific_line,
+            ',': self.get_specific_line,
+            '!': self.get_specific_line,
+
+        # Numerals
+            '1': self.get_specific_line,
+            '2': self.get_specific_line,
+            '3': self.get_specific_line,
+            '4': self.get_specific_line,
+            '5': self.get_specific_line,
+            '6': self.get_specific_line,
+            '7': self.get_specific_line,
+            '8': self.get_specific_line,
+            '9': self.get_specific_line,
+            '0': self.get_specific_line,
+
+            ' ': self.get_specific_line
+        }
+
+
+        while self.index != 6:
+            for character in self.text:
+                if character.isnumeric() or character.isspace() \
+                        or character == '!' or character == ',' or character == '.':
+                    if   character == '1': characters[character](self.one)
+                    elif character == '2': characters[character](self.two)
+                    elif character == '3': characters[character](self.three)
+                    elif character == '4': characters[character](self.four)
+                    elif character == '5': characters[character](self.five)
+                    elif character == '6': characters[character](self.six)
+                    elif character == '7': characters[character](self.seven)
+                    elif character == '8': characters[character](self.eight)
+                    elif character == '9': characters[character](self.nine)
+                    elif character == '0': characters[character](self.zero)
+                    elif character == ' ': characters[character](self.space)
+                    elif character == '!': characters[character](self.exclam)
+                    elif character == ',': characters[character](self.comma)
+                    elif character == '.': characters[character](self.dot)
+                else:
+                    characters[character](getattr(self, f'' + character.format(data=character) + '='.split('=')[0]))
+
+            self.generated += '\n'
+            self.index += 1
+
+        return self.generated
+
+
+if len(sys.argv) < 3:
+    # Help function
+    sys.exit(1)
+
+
+data = ''
+
+for i in range(1, len(sys.argv)):
+    data += sys.argv[i]
+
+inta = FFont(data)
+
+print(inta.generate())
