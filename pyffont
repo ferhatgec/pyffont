@@ -428,7 +428,8 @@ class FFont():
 
 
 if len(sys.argv) < 3:
-    # Help function
+    print('Fegeya PyFFont - Generate ASCII fonts!',
+          'Usage: pyffont text', sep='\n')
     sys.exit(1)
 
 
