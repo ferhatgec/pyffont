@@ -421,13 +421,15 @@ class FFont():
                 else:
                     characters[character](getattr(self, f'' + character.format(data=character) + '='.split('=')[0]))
 
-            self.generated += '\n'
+            if self.index < 4:
+                self.generated += '\n'
+
             self.index += 1
 
         return self.generated
 
 
-if len(sys.argv) < 3:
+if len(sys.argv) < 2:
     print('Fegeya PyFFont - Generate ASCII fonts!',
           'Usage: pyffont text', sep='\n')
     sys.exit(1)
